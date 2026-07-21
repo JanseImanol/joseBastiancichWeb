@@ -1,0 +1,188 @@
+/* =========================================
+   SECCIONES: PAQUETES Y PAGO (MODO OSCURO)
+   ========================================= */
+
+#paquetes, #pago {
+    background-color: #0d0d0d; /* Un negro casi puro, muy elegante */
+    color: #ffffff; /* Texto principal en blanco */
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Separación entre las distintas cajas de contenido */
+}
+
+/* =========================================
+   CONTENEDORES TIPO "TARJETA"
+   ========================================= */
+.contenido {
+    background-color: #1a1a1a; /* Un gris muuuy oscuro para que despegue del fondo */
+    padding: 40px 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px; /* Para que en PC no se estire de punta a punta */
+    text-align: center;
+    border-top: 4px solid #ff3333; /* Detalle de línea roja arriba de cada tarjeta */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra para darle profundidad */
+}
+
+/* =========================================
+   TIPOGRAFÍA: TÍTULOS Y TEXTOS
+   ========================================= */
+.contenido h2 {
+    color: #ff3333; /* Rojo vibrante para llamar la atención */
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    text-transform: uppercase; /* Los hace en mayúsculas para darles más fuerza */
+}
+
+.contenido p {
+    font-size: 1.1rem;
+    color: #cccccc; /* Gris clarito para los párrafos, cansa menos la vista que el blanco puro */
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+#paquetes ul {
+    list-style: none; /* Quitamos los puntos por defecto */
+    padding: 0;
+}
+
+#paquetes ul li {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Destacamos el CBU */
+#pago strong {
+    color: #ff3333;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   FORMULARIO DE PAGO
+   ========================================= */
+#formulario-pago {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Separación pareja entre los inputs */
+    text-align: left; /* Alineamos los inputs a la izquierda */
+}
+
+/* Estilo de las cajas de texto y opciones */
+#formulario-pago input[type="text"],
+#formulario-pago input[type="tel"],
+#formulario-pago select,
+#formulario-pago input[type="file"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #222222; /* Fondo oscuro para que combine */
+    border: 1px solid #444444; /* Borde sutil */
+    color: #ffffff;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Efecto magnético cuando el usuario hace clic para escribir */
+#formulario-pago input:focus,
+#formulario-pago select:focus {
+    border-color: #ff3333; /* El borde se pinta de rojo al escribir */
+    box-shadow: 0 0 8px rgba(255, 51, 51, 0.3); /* Un leve resplandor rojo */
+}
+
+/* =========================================
+   BOTONES
+   ========================================= */
+.btn, #btn-enviar {
+    display: inline-block;
+    width: 100%; /* Ocupan todo el ancho de su tarjeta */
+    padding: 15px;
+    background-color: #ff3333; /* Rojo principal */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    text-align: center;
+}
+
+/* Efecto al pasar el mouse por los botones principales */
+.btn:hover, #btn-enviar:hover {
+    background-color: #cc0000; /* Un rojo más oscuro */
+    transform: translateY(-3px); /* El botón "sube" un poquito al pasar el mouse */
+}
+
+/* Botón especial para "Volver al inicio" (Como está suelto, le damos otro estilo para que no compita) */
+#pago > .btn-principal {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: transparent; /* Fondo transparente */
+    color: #ff3333; /* Letras rojas */
+    border: 2px solid #ff3333; /* Borde rojo */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+#pago > .btn-principal:hover {
+    background-color: #ff3333; /* Se invierten los colores al pasar el mouse */
+    color: #ffffff;
+}
+
+
+/* =========================================
+   BOTÓN FLOTANTE DE WHATSAPP
+   ========================================= */
+.btn-whatsapp-flotante {
+    position: fixed; /* Esto lo clava a la pantalla */
+    bottom: 25px; /* Distancia desde abajo */
+    right: 25px; /* Distancia desde la derecha */
+    width: 65px;
+    height: 65px;
+    background-color: #25d366; /* El verde oficial de WhatsApp */
+    color: white;
+    border-radius: 50%; /* Lo hace un círculo perfecto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    z-index: 1000; /* Asegura que NADA lo tape */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Controlamos el tamaño del ícono adentro del botón */
+.btn-whatsapp-flotante svg {
+    width: 35px;
+    height: 35px;
+}
+
+/* Efecto al pasar el mouse por encima (PC) */
+.btn-whatsapp-flotante:hover {
+    background-color: #1ebd55;
+    transform: scale(1.1); /* Hace que el botón crezca un 10% */
+}
+
+/* --- AJUSTE PARA CELULARES --- */
+@media (max-width: 900px) {
+    .btn-whatsapp-flotante {
+        bottom: 15px;
+        right: 15px;
+        width: 55px; /* Un poquito más chico en celulares para que no moleste */
+        height: 55px;
+    }
+    
+    .btn-whatsapp-flotante svg {
+        width: 30px;
+        height: 30px;
+    }
+}
