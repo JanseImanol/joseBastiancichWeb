@@ -26,7 +26,7 @@
 
               // Petición HTTP a la URL que te dio Google
               fetch(
-                "https://script.google.com/macros/s/AKfycbwVvqwQNNZorLxGxvZSnY5fCxeScG9yYyc7R7Eysq6-wWcTatRRC-K71nEd_IJ6UrxNkA/exec",
+                "https://script.google.com/macros/s/AKfycbwjDeJu9TAkg8D5ZDtAg63p5A3vugxRBE94D6Gzxx2fap-HCg6fzNBvS0h6sywIcholFQ/exec",
                 {
                   method: "POST",
                   body: JSON.stringify(datosParaEnviar),

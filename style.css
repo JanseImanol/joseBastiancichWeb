@@ -82,18 +82,22 @@ ul li {
     flex-direction: column;
     justify-content: center; /* Centra el texto verticalmente */
     align-items: flex-start; /* Alinea el texto a la izquierda */
-    padding: 0 8%; /* Espacio a los costados para que el texto no toque los bordes */
+    padding: 0 15%; /* Espacio a los costados para que el texto no toque los bordes */
 }
 
 .mitad-derecha h1 {
-    font-size: 4rem; /* Título bien grande */
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 6rem; /* Título bien grande */
     color: #911414;
     margin-bottom: 20px;
     line-height: 1.1;
 }
 
 .mitad-derecha p {
-    font-size: 1.3rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
     color: #ffffff;
     margin-bottom: 40px;
     line-height: 1.6;
