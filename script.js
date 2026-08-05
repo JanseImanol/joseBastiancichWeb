@@ -46,3 +46,24 @@
             // Inicia la lectura del archivo
             lector.readAsDataURL(archivo);
           });
+
+
+
+          // Buscamos el input y nuestro label (botón falso)
+          const inputArchivo = document.getElementById('comprobante');
+          const textoArchivo = document.getElementById('texto-archivo');
+
+          // Le decimos que escuche cada vez que cambia el archivo seleccionado
+          inputArchivo.addEventListener('change', function() {
+              if (inputArchivo.files.length > 0) {
+                  // Si hay un archivo, mostramos el nombre
+                  textoArchivo.textContent = "✅ " + inputArchivo.files[0].name;
+                  // Le cambiamos el color al borde para que sepa que está todo ok
+                  textoArchivo.style.borderColor = "#25d366"; 
+                  textoArchivo.style.color = "#ffffff";
+              } else {
+                  // Si cancela, vuelve al texto original
+                  textoArchivo.textContent = "📎 Subir comprobante de pago";
+                  textoArchivo.style.borderColor = "#444444";
+              }
+          });

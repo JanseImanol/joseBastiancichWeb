@@ -48,7 +48,6 @@ ul li {
 }
 
 
-
 /* --- ESTILOS SECCIÓN 1 (ASIMÉTRICA) --- */
 .hero-dividido {
     /* Mantenemos el 100vh para que ocupe toda la pantalla, pero cambiamos a flex horizontal */
@@ -169,8 +168,9 @@ ul li {
     height: auto;
     border-radius: 12px; /* Suavizamos las esquinas de la foto */
     box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Le damos profundidad */
-
 }
+
+
 
 /* --- 2. Estilos de la Columna Central (Texto) --- */
 .texto-centro h2 {

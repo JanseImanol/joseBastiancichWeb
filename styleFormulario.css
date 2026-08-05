@@ -1,3 +1,10 @@
+body{
+    background-color: #0d0d0d;
+}
+html{
+    background-color: #0d0d0d;
+}
+
 /* =========================================
    SECCIONES: PAQUETES Y PAGO (MODO OSCURO)
    ========================================= */
@@ -120,6 +127,27 @@
     transform: translateY(-3px); /* El botón "sube" un poquito al pasar el mouse */
 }
 
+.btn, #btn-pago {
+    display: inline-block;
+    width: 100%; /* Ocupan todo el ancho de su tarjeta */
+    padding: 15px;
+    background-color: #690202; /* Rojo principal */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    text-align: center;
+}
+
+.btn:hover, #btn-pago:hover {
+    background-color: #cc0000; /* Un rojo más oscuro */
+    transform: translateY(-3px); /* El botón "sube" un poquito al pasar el mouse */
+}
+
 /* Botón especial para "Volver al inicio" (Como está suelto, le damos otro estilo para que no compita) */
 #pago > .btn-principal {
     display: inline-block;
@@ -171,6 +199,40 @@
     background-color: #1ebd55;
     transform: scale(1.1); /* Hace que el botón crezca un 10% */
 }
+
+.sub{
+    text-decoration: underline;
+}
+
+
+
+/* Ocultamos el input original feo del navegador */
+input[type="file"] {
+    display: none;
+}
+
+/* Diseñamos nuestro botón falso */
+.btn-subir-archivo {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: #222222; /* El mismo fondo de tus otros inputs */
+    border: 1px dashed #444444; /* Un borde punteado queda genial para subir archivos */
+    color: #cccccc;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+/* Efecto al pasar el mouse */
+.btn-subir-archivo:hover {
+    border-color: #ff3333;
+    color: #ffffff;
+    background-color: #2a2a2a;
+}
+
 
 /* --- AJUSTE PARA CELULARES --- */
 @media (max-width: 900px) {
