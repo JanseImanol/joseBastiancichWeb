@@ -1,399 +1,414 @@
-html, body {
-    background-color: #001B2E;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden; /* Evita que haya scroll horizontal accidental */
-    scroll-behavior: smooth; /* Mantiene el desplazamiento suave al hacer clic en enlaces */
+html,
+body {
+  background-color: #001b2e;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Evita que haya scroll horizontal accidental */
+  scroll-behavior: smooth; /* Mantiene el desplazamiento suave al hacer clic en enlaces */
 }
 
 /* Reset básico para quitar los márgenes que traen los navegadores por defecto */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif; /* Podés cambiar la fuente luego */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif; /* Podés cambiar la fuente luego */
 }
 
 /* 3. Contenedor para que el texto no se estire demasiado en monitores grandes */
 .contenido {
-    max-width: 800px;
-    width: 100%;
+  max-width: 800px;
+  width: 100%;
 }
 
 /* 5. Estilos básicos para el botón de WhatsApp o enlaces */
 .btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #25d366; /* Color de WhatsApp */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #25d366; /* Color de WhatsApp */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 ul {
-    list-style: none;
-    margin-top: 20px;
+  list-style: none;
+  margin-top: 20px;
 }
 
 ul li {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
 }
 
-.rojo{
-    color: #911414;
+.rojo {
+  color: #911414;
 }
-
 
 /* --- ESTILOS SECCIÓN 1 (ASIMÉTRICA) --- */
 .hero-dividido {
-    /* Mantenemos el 100vh para que ocupe toda la pantalla, pero cambiamos a flex horizontal */
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding: 0; /* Le sacamos el padding general para que la foto toque los bordes si querés */
-    background-color: #000000;
+  /* Mantenemos el 100vh para que ocupe toda la pantalla, pero cambiamos a flex horizontal */
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0; /* Le sacamos el padding general para que la foto toque los bordes si querés */
+  background-color: #000000;
 }
 
 /* Configuramos la caja de la izquierda (35%) */
 .mitad-izquierda {
-    width: 35%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #2c3e50; /* Color de fondo por si la foto tarda en cargar */
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2c3e50; /* Color de fondo por si la foto tarda en cargar */
 }
 
 /* Hacemos que la foto ocupe bien su espacio sin deformarse */
 .foto-hero {
-    width: 100%;
-    height: 100vh; /* Que ocupe todo el alto de la pantalla */
-    object-fit: cover; /* Recorta la imagen para que llene el espacio perfectamente */
+  width: 100%;
+  height: 100vh; /* Que ocupe todo el alto de la pantalla */
+  object-fit: cover; /* Recorta la imagen para que llene el espacio perfectamente */
 }
 
 /* Configuramos la caja de la derecha (65%) */
 .mitad-derecha {
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centra el texto verticalmente */
-    align-items: flex-start; /* Alinea el texto a la izquierda */
-    padding: 0 15%; /* Espacio a los costados para que el texto no toque los bordes */
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el texto verticalmente */
+  align-items: flex-start; /* Alinea el texto a la izquierda */
+  padding: 0 15%; /* Espacio a los costados para que el texto no toque los bordes */
 }
 
 .mitad-derecha h1 {
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-size: 6rem; /* Título bien grande */
-    color: #911414;
-    margin-bottom: 20px;
-    line-height: 1.1;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 6rem; /* Título bien grande */
+  color: #911414;
+  margin-bottom: 20px;
+  line-height: 1.1;
 }
 
 .mitad-derecha p {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 1.5rem;
-    color: #ffffff;
-    margin-bottom: 40px;
-    line-height: 1.6;
-    max-width: 800px;
-    text-align: justify;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  max-width: 800px;
+  text-align: justify;
 }
 
-.mitad-derecha hr{
-    width: 100%; /* Obligamos a que ocupe todo el ancho */
-    max-width: 400px; /* Opcional: para que la línea no sea taaan larga */
-    border: none; /* Le sacamos el borde feo por defecto del navegador */
-    height: 3px; /* El grosor de tu línea */
-    background-color: #a01f1f; /* El color que quieras (acá usé el verde del botón) */
-    margin: 10px 0; /* Separación: 20px arriba y abajo, 0 a los costados */
-    
-    /* Si querés que la línea quede alineada a la izquierda (como el título): */
-    align-self: flex-start;
-}
+.mitad-derecha hr {
+  width: 100%; /* Obligamos a que ocupe todo el ancho */
+  max-width: 400px; /* Opcional: para que la línea no sea taaan larga */
+  border: none; /* Le sacamos el borde feo por defecto del navegador */
+  height: 3px; /* El grosor de tu línea */
+  background-color: #a01f1f; /* El color que quieras (acá usé el verde del botón) */
+  margin: 10px 0; /* Separación: 20px arriba y abajo, 0 a los costados */
 
+  /* Si querés que la línea quede alineada a la izquierda (como el título): */
+  align-self: flex-start;
+}
 
 /* Estilo del botón */
 .btn-principal {
-    display: inline-block;
-    padding: 15px 40px;
-    background-color: #911414;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: background-color 0.3s ease; /* Efecto suave al pasar el mouse */
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #911414;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease; /* Efecto suave al pasar el mouse */
 }
 
 .btn-principal:hover {
-    background-color: #6d0e0e; /* Un tono más oscuro al pasar el mouse */
+  background-color: #6d0e0e; /* Un tono más oscuro al pasar el mouse */
 }
-
-
-
-
 
 /* --- ESTILOS SECCIÓN 2 (TRES COLUMNAS) --- */
 .seccion-tres-columnas {
-    display: flex;
-    flex-direction: row; /* Coloca los elementos uno al lado del otro */
-    justify-content: space-between;
-    align-items: center; /* Los centra verticalmente */
-    padding: 0 0; /* Un poco de aire a los costados para que no toque los bordes */
-    gap: 40px; /* Crea una separación pareja entre las tres columnas */
-    background-color: #000000;
+  display: flex;
+  flex-direction: row; /* Coloca los elementos uno al lado del otro */
+  justify-content: space-between;
+  align-items: center; /* Los centra verticalmente */
+  padding: 0 0; /* Un poco de aire a los costados para que no toque los bordes */
+  gap: 40px; /* Crea una separación pareja entre las tres columnas */
+  background-color: #000000;
 }
 
 /* Esta es la regla mágica para las 3 divisiones */
 .columna {
-    flex: 1; /* Fuerza a las cajas a medir exactamente un 33.3% cada una */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  flex: 1; /* Fuerza a las cajas a medir exactamente un 33.3% cada una */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .foto-col {
-    border-right: 2px solid #ee1313; /* Grosor, estilo y color de la línea */
-    padding-right: 30px; /* Esto separa la línea de la foto */
+  border-right: 2px solid #ee1313; /* Grosor, estilo y color de la línea */
+  padding-right: 30px; /* Esto separa la línea de la foto */
 }
 
 /* --- 1. Estilos de la Columna Izquierda (Foto) --- */
 .foto-col img {
-    width: 100%; /* La foto ocupa todo el ancho de su tercio */
-    height: auto;
-    border-radius: 12px; /* Suavizamos las esquinas de la foto */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Le damos profundidad */
+  width: 100%; /* La foto ocupa todo el ancho de su tercio */
+  height: auto;
+  border-radius: 12px; /* Suavizamos las esquinas de la foto */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Le damos profundidad */
 }
-
-
 
 /* --- 2. Estilos de la Columna Central (Texto) --- */
 .texto-centro h2 {
-    color: #ffffff;
-    margin-bottom: 20px;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
-.texto-centro h3 {  
-    color: #ffffff;
-    margin-bottom: 20px;
+.texto-centro h3 {
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
 .texto-centro p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #ffffff;
-    margin-bottom: 15px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 15px;
 }
 
 /* --- 3. Estilos de la Columna Derecha (Ícono + Texto) --- */
 .texto-icono {
-    align-items: center; /* Centramos el contenido de esta columna */
-    text-align: center;
-    padding: 30px 20px;
-    border-radius: 12px;
+  align-items: center; /* Centramos el contenido de esta columna */
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 12px;
 }
 
 .icono-pequeno {
-    width: 60px; /* Controlamos el tamaño del ícono para que no sea gigante */
-    height: 60px;
-    margin-bottom: 20px;
+  width: 60px; /* Controlamos el tamaño del ícono para que no sea gigante */
+  height: 60px;
+  margin-bottom: 20px;
 }
 
 .texto-icono h2 {
-    color: #ffffff; /* Usamos el color verde que ya venías manejando */
-    margin-bottom: 15px;
+  color: #ffffff; /* Usamos el color verde que ya venías manejando */
+  margin-bottom: 15px;
 }
 
 .texto-icono p {
-    font-size: 1rem;
-    color: #ffffff;
-    line-height: 1.5;
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.5;
 }
-
-
-
 
 /* --- ESTILOS SECCIÓN 3 (cuatro COLUMNAS) --- */
 .seccion-cuatro-columnas {
-    display: flex;
-    flex-direction: row; /* Coloca los elementos uno al lado del otro */
-    justify-content: space-between;
-    align-items: center; /* Los centra verticalmente */
-    padding: 20px; /* Un poco de aire a los costados para que no toque los bordes */
-    gap: 40px; /* Crea una separación pareja entre las tres columnas */
-    background-color: #000000;
+  display: flex;
+  flex-direction: row; /* Coloca los elementos uno al lado del otro */
+  justify-content: space-between;
+  align-items: center; /* Los centra verticalmente */
+  padding: 20px; /* Un poco de aire a los costados para que no toque los bordes */
+  gap: 40px; /* Crea una separación pareja entre las tres columnas */
+  background-color: #000000;
 }
 
 /* Esta es la regla mágica para las 3 divisiones */
 .columna {
-    flex: 1; /* Fuerza a las cajas a medir exactamente un 33.3% cada una */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #ffffff;
+  flex: 1; /* Fuerza a las cajas a medir exactamente un 33.3% cada una */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
 }
-
 
 /* --- ESTILOS SECCIÓN 4 (si no) --- */
-.seccion-dos-columnas{
-    display: flex;
-    flex-direction: row; /* Coloca los elementos uno al lado del otro */
-    justify-content: space-between;
-    align-items: center; /* Los centra verticalmente */
-    padding: 20px; /* Un poco de aire a los costados para que no toque los bordes */
-    gap: 40px; /* Crea una separación pareja entre las tres columnas */
+.seccion-dos-columnas {
+  display: flex;
+  flex-direction: row; /* Coloca los elementos uno al lado del otro */
+  justify-content: space-between;
+  align-items: center; /* Los centra verticalmente */
+  padding: 20px; /* Un poco de aire a los costados para que no toque los bordes */
+  gap: 40px; /* Crea una separación pareja entre las tres columnas */
 }
 
-.negro{
-    background-color: #000000;
+.negro {
+  background-color: #000000;
 }
 
-.blanco{
-    background-color: #e0d5d5f1;
+.blanco {
+  background-color: #e0d5d5f1;
 }
 
 /* Esta es la regla mágica para las 3 divisiones */
-.columna-blanca{
-    flex: 1; /* Fuerza a las cajas a medir exactamente un 33.3% cada una */
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content:center;
-    color: #000000;
+.columna-blanca {
+  flex: 1; /* Fuerza a las cajas a medir exactamente un 33.3% cada una */
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  color: #000000;
 }
 
 /* 1. Limpiamos la lista por defecto */
-.lista-paquetes {
-    list-style: none; /* Esto hace desaparecer los puntitos negros */
-    padding: 0;
-    margin: 20px 0;
+.lista-sino {
+  list-style: none; /* Esto hace desaparecer los puntitos negros */
+  padding: 0;
+  margin: 20px 0;
 }
 
 /* Le damos un poco de espacio y estilo al texto de la lista */
-.lista-paquetes li {
-    font-size: 1.1rem;
-    margin-bottom: 12px;
-    color: #444; /* Un gris oscuro para que sea fácil de leer */
+.lista-sino li {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #444; /* Un gris oscuro para que sea fácil de leer */
 }
 
 /* 2. Creamos el tilde verde */
 .incluido::before {
-    content: "✔"; /* Podés copiar y pegar este símbolo directamente */
-    color: #25d366; /* Usamos el mismo verde tipo WhatsApp que ya tenías */
-    font-weight: bold;
-    margin-right: 10px; /* Separamos el tilde del texto */
-    font-size: 1.2rem;
+  content: "✔"; /* Podés copiar y pegar este símbolo directamente */
+  color: #25d366; /* Usamos el mismo verde tipo WhatsApp que ya tenías */
+  font-weight: bold;
+  margin-right: 10px; /* Separamos el tilde del texto */
+  font-size: 1.2rem;
 }
 
 /* 3. Creamos la cruz roja */
 .no-incluido::before {
-    content: "✖"; /* Símbolo de la cruz */
-    color: #e74c3c; /* Un rojo claro que contrasta bien */
-    font-weight: bold;
-    margin-right: 10px;
-    font-size: 1.2rem;
+  content: "✖"; /* Símbolo de la cruz */
+  color: #e74c3c; /* Un rojo claro que contrasta bien */
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 1.2rem;
 }
-
 
 /* =========================================
    BOTÓN FLOTANTE DE WHATSAPP
    ========================================= */
 .btn-whatsapp-flotante {
-    position: fixed; /* Esto lo clava a la pantalla */
-    bottom: 25px; /* Distancia desde abajo */
-    right: 25px; /* Distancia desde la derecha */
-    width: 65px;
-    height: 65px;
-    background-color: #25d366; /* El verde oficial de WhatsApp */
-    color: white;
-    border-radius: 50%; /* Lo hace un círculo perfecto */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
-    z-index: 1000; /* Asegura que NADA lo tape */
-    transition: transform 0.3s ease, background-color 0.3s ease;
+  position: fixed; /* Esto lo clava a la pantalla */
+  bottom: 25px; /* Distancia desde abajo */
+  right: 25px; /* Distancia desde la derecha */
+  width: 65px;
+  height: 65px;
+  background-color: #25d366; /* El verde oficial de WhatsApp */
+  color: white;
+  border-radius: 50%; /* Lo hace un círculo perfecto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+  z-index: 1000; /* Asegura que NADA lo tape */
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 
 /* Controlamos el tamaño del ícono adentro del botón */
 .btn-whatsapp-flotante svg {
-    width: 35px;
-    height: 35px;
+  width: 35px;
+  height: 35px;
 }
 
 /* Efecto al pasar el mouse por encima (PC) */
 .btn-whatsapp-flotante:hover {
-    background-color: #1ebd55;
-    transform: scale(1.1); /* Hace que el botón crezca un 10% */
+  background-color: #1ebd55;
+  transform: scale(1.1); /* Hace que el botón crezca un 10% */
 }
 
 /* --- AJUSTE PARA CELULARES --- */
 @media (max-width: 900px) {
-    .btn-whatsapp-flotante {
-        bottom: 15px;
-        right: 15px;
-        width: 55px; /* Un poquito más chico en celulares para que no moleste */
-        height: 55px;
-    }
-    
-    .btn-whatsapp-flotante svg {
-        width: 30px;
-        height: 30px;
-    }
+  .btn-whatsapp-flotante {
+    bottom: 15px;
+    right: 15px;
+    width: 55px; /* Un poquito más chico en celulares para que no moleste */
+    height: 55px;
+  }
+
+  .btn-whatsapp-flotante svg {
+    width: 30px;
+    height: 30px;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* --- RESPONSIVE: EL SECRETO PARA CELULARES --- */
 /* En pantallas chicas (celulares), 35/65 se ve muy apretado. 
    Acá le decimos que apile las cosas una arriba de la otra. */
 @media (max-width: 900px) {
-    .hero-dividido {
-        flex-direction: column;
-    }
-    
-    .mitad-izquierda, .mitad-derecha {
-        width: 100%;
-    }
+  .hero-dividido {
+    flex-direction: column;
+  }
 
-    .foto-hero {
-        height: 50vh; /* La foto ocupa la mitad de arriba en el celular */
-    }
+  .mitad-izquierda,
+  .mitad-derecha {
+    width: 100%;
+  }
 
-    .mitad-derecha {
-        height: 50vh; /* El texto ocupa la mitad de abajo */
-        padding: 40px 20px;
-        align-items: center; /* Centramos el texto en celulares */
-        text-align: center;
-    }
+  .foto-hero {
+    height: 50vh; /* La foto ocupa la mitad de arriba en el celular */
+  }
 
-    .mitad-derecha h1 {
-        font-size: 2.5rem;
-    }
+  .mitad-derecha {
+    height: 50vh; /* El texto ocupa la mitad de abajo */
+    padding: 40px 20px;
+    align-items: center; /* Centramos el texto en celulares */
+    text-align: center;
+  }
 
-    .seccion-tres-columnas {
-        flex-direction: column; /* Cambia la dirección a vertical */
-        padding: 60px 20px;
-        height: auto; /* Permite que la sección crezca lo necesario hacia abajo */
-        min-height: 100vh;
-    }
+  .mitad-derecha h1 {
+    font-size: 2.5rem;
+  }
 
-    .columna {
-        width: 100%; /* Cada columna pasa a ocupar el 100% de la pantalla */
-        margin-bottom: 40px; /* Separación entre cajas al estar apiladas */
-    }
+  .seccion-tres-columnas {
+    flex-direction: column; /* Cambia la dirección a vertical */
+    padding: 60px 20px;
+    height: auto; /* Permite que la sección crezca lo necesario hacia abajo */
+    min-height: 100vh;
+  }
+
+  .columna {
+    width: 100%; /* Cada columna pasa a ocupar el 100% de la pantalla */
+    margin-bottom: 40px; /* Separación entre cajas al estar apiladas */
+  }
+}
+
+/* =========================================
+   AJUSTES FALTANTES PARA CELULARES
+   ========================================= */
+
+/* Hacemos que el video de YouTube sea 100% responsive */
+.contenedor-video iframe {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+}
+
+/* Modificamos el breakpoint existente para incluir las otras secciones */
+@media (max-width: 900px) {
+  /* Hacemos que las secciones de 4 y 2 columnas se apilen verticalmente */
+  .seccion-cuatro-columnas,
+  .seccion-dos-columnas {
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+
+  .columna-blanca {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  /* Arreglamos la línea divisoria roja de la foto en la sección 2 */
+  .foto-col {
+    border-right: none; /* Quitamos la línea vertical porque ahora están apilados */
+    border-bottom: 2px solid #ee1313; /* La ponemos abajo de la foto */
+    padding-right: 0;
+    padding-bottom: 30px;
+  }
 }
