@@ -2,7 +2,6 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styleFormulario.css" />
     <link
@@ -21,12 +20,12 @@
       <div class="contenido">
         <h2>Adquirí tu Paquete</h2>
         <br />
-        <a href="https://paypal.me/JoseBastiancich/17"
-          ><button type="button" id="btn-pago">REALIZAR PAGO</button></a
-        >
+        <a href="https://paypal.me/JoseBastiancich/17">
+          <button type="button" id="btn-pago">REALIZAR PAGO</button>
+        </a>
         <br />
         <br />
-        <p class="sub">Recorda guardar el comprobante para poder enviarlo</p>
+        <p class="sub">Recordá guardar el comprobante para poder enviarlo</p>
 
         <form id="formulario-pago">
           <input
@@ -39,16 +38,13 @@
           <select id="paquete">
             <option value="Superacion Personal">Protocolo 72hs (17usd)</option>
           </select>
-          <!-- Envolvemos todo en un div para mantener el orden -->
+
           <div class="contenedor-archivo">
-            <!-- 1. El input real (lo vamos a ocultar con CSS) -->
             <input
               type="file"
               id="comprobante"
               accept="image/png, image/jpeg, .pdf"
             />
-
-            <!-- 2. Nuestro botón falso personalizado -->
             <label
               for="comprobante"
               id="texto-archivo"
@@ -71,7 +67,6 @@
       target="_blank"
       aria-label="Contactar por WhatsApp"
     >
-      <!-- Código SVG que dibuja el ícono de WhatsApp -->
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 448 512"

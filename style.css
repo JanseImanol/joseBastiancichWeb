@@ -139,9 +139,13 @@ ul li {
   flex-direction: row; /* Coloca los elementos uno al lado del otro */
   justify-content: space-between;
   align-items: center; /* Los centra verticalmente */
-  padding: 0 0; /* Un poco de aire a los costados para que no toque los bordes */
+  padding: 80px 20px; /* Un poco de aire a los costados para que no toque los bordes */
   gap: 40px; /* Crea una separación pareja entre las tres columnas */
   background-color: #000000;
+}
+
+.texto-centro {
+  text-align: right;
 }
 
 /* Esta es la regla mágica para las 3 divisiones */
@@ -150,11 +154,6 @@ ul li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.foto-col {
-  border-right: 2px solid #ee1313; /* Grosor, estilo y color de la línea */
-  padding-right: 30px; /* Esto separa la línea de la foto */
 }
 
 /* --- 1. Estilos de la Columna Izquierda (Foto) --- */
@@ -181,14 +180,20 @@ ul li {
   line-height: 1.6;
   color: #ffffff;
   margin-bottom: 15px;
+
+  border-right: 4px solid #ee1313; /* Grosor y color de la línea */
+  padding-right: 20px; /* Separación entre la línea y las palabras */
+  margin-left: 5px; /* Un pequeño margen para acomodarla visualmente */
 }
 
 /* --- 3. Estilos de la Columna Derecha (Ícono + Texto) --- */
 .texto-icono {
-  align-items: center; /* Centramos el contenido de esta columna */
+  align-items: center;
   text-align: center;
-  padding: 30px 20px;
-  border-radius: 12px;
+  padding: 40px 30px; /* Un poco más de espacio interno */
+  border: 2px solid #fdfdfd;
+  border-radius: 12px; /* Esquinas redondeadas */
+  background-color: #0a0a0a; /* Opcional: un fondo apenitas más claro para que resalte */
 }
 
 .icono-pequeno {
@@ -214,9 +219,37 @@ ul li {
   flex-direction: row; /* Coloca los elementos uno al lado del otro */
   justify-content: space-between;
   align-items: center; /* Los centra verticalmente */
-  padding: 20px; /* Un poco de aire a los costados para que no toque los bordes */
+  padding: 80px 20px; /* Un poco de aire a los costados para que no toque los bordes */
   gap: 40px; /* Crea una separación pareja entre las tres columnas */
   background-color: #000000;
+}
+
+.icono-rojo {
+  width: 40px; /* Tamaño del ícono */
+  height: 40px;
+  color: #ee1313; /* Tu color rojo */
+  vertical-align: middle; /* Lo alinea perfecto con el texto de al lado */
+  margin-right: 8px; /* Lo separa un poquito de la palabra */
+}
+
+.titulo {
+  text-align: center;
+  align-items: center; /* Fuerza a que los elementos internos se centren en el flexbox */
+  justify-content: center;
+}
+
+/* Hacemos los títulos mucho más grandes y llamativos */
+.titulo h2 {
+  font-size: 3.8rem; /* Podés subir o bajar este número según qué tan gigante lo quieras */
+  margin-bottom: 5px; /* Juntamos un poco el "LAS PRIMERAS" con el "72 HORAS" */
+  line-height: 1.1;
+}
+
+/* Agrandamos los párrafos para que acompañen el tamaño del título */
+.titulo p {
+  font-size: 1.5rem; /* Letra más grande que el texto normal */
+  margin-bottom: 10px;
+  color: #dddddd; /* Un gris muy clarito para diferenciarlo un poco del blanco puro del título */
 }
 
 /* Esta es la regla mágica para las 3 divisiones */
